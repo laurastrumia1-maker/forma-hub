@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FormaHub — Inicio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Header (menú simple) ===== -->
+  <header class="site-header">
+    <a href="index.html" class="logo-wrap" aria-label="Ir al inicio">
+      <img src="assets/img/logoformahub.png" alt="Logo FormaHub" class="logo"/>
+    </a>
+    <nav class="main-nav" aria-label="Principal">
+      <a href="index.html" class="activo">Inicio</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#sobre">Sobre nosotros</a>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <main>
+    <section class="intro" style="text-align:center; padding: clamp(40px,6vw,80px) 20px;">
+      <h1 class="hero-title" style="font-size: clamp(36px, 7vw, 64px); font-weight:900; color:var(--blue);">
+        DALE FORMA A TUS IDEAS
+      </h1>
+      <p class="hero-sub" style="margin-top:8px">Todo puede empezar con una forma simple</p>
+
+      <a href="cursos.html" class="btn-cta" style="margin-top:26px; display:inline-block;">
+        Ver todo el catálogo
+      </a>
+
+      <!-- Semicírculo decorativo (limpio, equilibrado) -->
+      <svg viewBox="0 0 600 200" width="360" height="120" aria-hidden="true" style="display:block; margin:36px auto 0;">
+        <path d="M0 200 A300 300 0 0 1 600 200 Z" fill="var(--orange)"/>
+      </svg>
+    </section>
+
+    <!-- Sección “Sobre” corta (ancla del menú) -->
+    <section id="sobre" style="max-width:920px;margin:40px auto 80px;padding:0 20px;text-align:center;">
+      <h2 style="font-family:var(--font-sans);color:var(--blue);">Sobre FormaHub</h2>
+      <p style="color:var(--soft-ink)">
+        Hacemos accesible el diseño, la comunicación y el marketing para personas reales con proyectos reales,
+        con un método claro, visual y humano.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 FormaHub — Diseño, comunicación y experiencias digitales.</p>
+  </footer>
+</body>
+</html>

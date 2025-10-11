@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FormaHub — Cursos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Header (menú simple) ===== -->
+  <header class="site-header">
+    <a href="index.html" class="logo-wrap" aria-label="Ir al inicio">
+      <img src="assets/img/logoformahub.png" alt="Logo FormaHub" class="logo"/>
+    </a>
+    <nav class="main-nav" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="cursos.html" class="activo">Cursos</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="index.html#sobre">Sobre nosotros</a>
+    </nav>
+  </header>
+
+  <main class="cursos-page">
+    <!-- ===== Hero ===== -->
+    <section class="intro">
+      <h1 class="hero-title">Aprendé a tu ritmo</h1>
+      <p class="hero-sub">Contenido claro, visual y aplicable a proyectos reales.</p>
+    </section>
+
+    <!-- ===== Tabs (dentro de Cursos) ===== -->
+    <section id="tabs" class="tabs">
+      <button class="tab-btn active" data-target="gratis">Cursos gratis</button>
+      <button class="tab-btn" data-target="pagos">Formaciones</button>
+    </section>
+
+    <!-- ===== GRID: Cursos gratis ===== -->
+    <section class="cards-wrap show" data-tab="gratis" aria-labelledby="Cursos gratuitos">
+      <div class="cards-grid">
+        <article class="curso-card">
+          <h3>Dale forma a tu proyecto</h3>
+          <p>Convertí una idea difusa en un proyecto concreto con pasos simples.</p>
+        </article>
+
+        <article class="curso-card">
+          <h3>Tu comunicación en 3 pasos</h3>
+          <p>Definí mensaje, público y canales para comunicar sin enredos.</p>
+        </article>
+
+        <article class="curso-card">
+          <h3>Comunicar con claridad</h3>
+          <p>Técnicas prácticas para que tus piezas sean fáciles de entender.</p>
+        </article>
+
+        <article class="curso-card">
+          <h3>Identidad mínima viable</h3>
+          <p>Colores, tipografías y tono inicial para salir prolijo y coherente.</p>
+        </article>
+
+        <article class="curso-card">
+          <h3>Diseño de posteos simples</h3>
+          <p>Composiciones básicas y accesibles inspiradas en la Bauhaus.</p>
+        </article>
+
+        <article class="curso-card">
+          <h3>Guía de contenidos rápidos</h3>
+          <p>Ideas y plantillas para sostener tu comunicación semana a semana.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== GRID: Formaciones pagas ===== -->
+    <section class="cards-wrap" data-tab="pagos" aria-labelledby="Formaciones">
+      <div class="cards-grid">
+        <article class="curso-card">
+          <h3>Comunicación visual para proyectos reales</h3>
+          <p>Diseño aplicado a marcas personales y emprendimientos con sentido.</p>
+        </article>
+
+        <article class="curso-card">
+          <h3>Storytelling y marca personal</h3>
+          <p>Construí una narrativa auténtica para conectar con tu audiencia.</p>
+        </article>
+
+        <article class="curso-card">
+          <h3>Diseño y contenido para no diseñadores</h3>
+          <p>Herramientas y métodos para crear piezas estéticas sin experiencia previa.</p>
+        </article>
+
+        <article class="curso-card">
+          <h3>Marketing para proyectos culturales</h3>
+          <p>Estrategias humanas para festivales, espacios y artistas independientes.</p>
+        </article>
+
+        <article class="curso-card">
+          <h3>Arquitectura de contenidos</h3>
+          <p>Ordená tu mensaje y publicá con un sistema simple y sostenible.</p>
+        </article>
+
+        <article class="curso-card">
+          <h3>Portfolio y piezas interactivos</h3>
+          <p>Micro-sitios y materiales digitales que cuentan tu valor con claridad.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 FormaHub — Diseño, comunicación y experiencias digitales.</p>
+  </footer>
+
+  <script>
+    // Tabs simples
+    const btns = document.querySelectorAll('.tab-btn');
+    const panes = document.querySelectorAll('.cards-wrap');
+
+    btns.forEach(b=>{
+      b.addEventListener('click', ()=>{
+        btns.forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+
+        const target = b.dataset.target;
+        panes.forEach(p=>{
+          p.classList.toggle('show', p.dataset.tab === target);
+        });
+
+        document.getElementById('tabs').scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    });
+
+    // Si llegan con #tabs, abrimos "Formaciones"
+    if (location.hash === '#tabs') {
+      document.querySelector('.tab-btn[data-target="pagos"]').click();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FormaHub — Contacto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <a href="index.html" class="logo-wrap" aria-label="Ir al inicio">
+      <img src="assets/img/logoformahub.png" alt="Logo FormaHub" class="logo"/>
+    </a>
+    <nav class="main-nav" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="contacto.html" class="activo">Contacto</a>
+      <a href="sobrenosotros.html">Sobre nosotros</a>
+    </nav>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <main class="contacto-page">
+    <section class="contacto-hero">
+      <h1 class="hero-title">Hablemos</h1>
+      <p class="hero-sub">Nos encanta escuchar ideas, proyectos y preguntas.</p>
+
+      <svg viewBox="0 0 600 200" width="340" height="120" aria-hidden="true" style="display:block; margin:40px auto 0;">
+        <circle cx="300" cy="100" r="100" fill="var(--blue)" opacity="0.1"/>
+      </svg>
+    </section>
+
+    <!-- ===== Formulario ===== -->
+    <section class="formulario-contacto">
+      <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos en qué te podemos ayudar"></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+      </form>
+
+      <div class="contacto-datos">
+        <h2>O encontranos en</h2>
+        <p><strong>Email:</strong> hola@formahub.com</p>
+        <p><strong>Instagram:</strong> <a href="#">@formahub</a></p>
+        <p><strong>Ubicación:</strong> Patagonia, Argentina 🌎</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 FormaHub — Diseño, comunicación y experiencias digitales.</p>
+  </footer>
+</body>
+</html>
