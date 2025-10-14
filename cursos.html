@@ -3,134 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FormaHub — Cursos</title>
+  <title>Cursos — FormaHub</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- ===== Header (menú simple) ===== -->
+  <!-- Header -->
   <header class="site-header">
-    <a href="index.html" class="logo-wrap" aria-label="Ir al inicio">
-      <img src="assets/img/logoformahub.png" alt="Logo FormaHub" class="logo"/>
+    <a href="index.html" class="logo-wrap">
+      <img src="assets/img/logoformahub.png" alt="Logo FormaHub" class="logo" />
     </a>
-    <nav class="main-nav" aria-label="Principal">
+    <nav class="main-nav">
       <a href="index.html">Inicio</a>
       <a href="cursos.html" class="activo">Cursos</a>
       <a href="contacto.html">Contacto</a>
-      <a href="index.html#sobre">Sobre nosotros</a>
+      <a href="sobrenosotros.html">Sobre nosotros</a>
     </nav>
   </header>
 
   <main class="cursos-page">
-    <!-- ===== Hero ===== -->
-    <section class="intro">
-      <h1 class="hero-title">Aprendé a tu ritmo</h1>
-      <p class="hero-sub">Contenido claro, visual y aplicable a proyectos reales.</p>
-    </section>
-
-    <!-- ===== Tabs (dentro de Cursos) ===== -->
-    <section id="tabs" class="tabs">
-      <button class="tab-btn active" data-target="gratis">Cursos gratis</button>
-      <button class="tab-btn" data-target="pagos">Formaciones</button>
-    </section>
-
-    <!-- ===== GRID: Cursos gratis ===== -->
-    <section class="cards-wrap show" data-tab="gratis" aria-labelledby="Cursos gratuitos">
-      <div class="cards-grid">
-        <article class="curso-card">
-          <h3>Dale forma a tu proyecto</h3>
-          <p>Convertí una idea difusa en un proyecto concreto con pasos simples.</p>
-        </article>
-
-        <article class="curso-card">
-          <h3>Tu comunicación en 3 pasos</h3>
-          <p>Definí mensaje, público y canales para comunicar sin enredos.</p>
-        </article>
-
-        <article class="curso-card">
-          <h3>Comunicar con claridad</h3>
-          <p>Técnicas prácticas para que tus piezas sean fáciles de entender.</p>
-        </article>
-
-        <article class="curso-card">
-          <h3>Identidad mínima viable</h3>
-          <p>Colores, tipografías y tono inicial para salir prolijo y coherente.</p>
-        </article>
-
-        <article class="curso-card">
-          <h3>Diseño de posteos simples</h3>
-          <p>Composiciones básicas y accesibles inspiradas en la Bauhaus.</p>
-        </article>
-
-        <article class="curso-card">
-          <h3>Guía de contenidos rápidos</h3>
-          <p>Ideas y plantillas para sostener tu comunicación semana a semana.</p>
-        </article>
+    <!-- Hero Cursos -->
+    <section class="cursos-hero">
+      <div class="container">
+        <h1 class="cursos-title">Aprendé a tu ritmo</h1>
+        <p class="cursos-subtitle">Contenido claro, visual y aplicable a proyectos reales.</p>
+        
+        <!-- Tabs -->
+        <div class="tabs-container" id="tabs">
+          <button class="tab-btn active" data-tab="gratis">
+            <span class="tab-icon">🎁</span>
+            Cursos Gratuitos
+          </button>
+          <button class="tab-btn" data-tab="pagos">
+            <span class="tab-icon">🚀</span>
+            Formaciones
+          </button>
+        </div>
       </div>
     </section>
 
-    <!-- ===== GRID: Formaciones pagas ===== -->
-    <section class="cards-wrap" data-tab="pagos" aria-labelledby="Formaciones">
-      <div class="cards-grid">
-        <article class="curso-card">
-          <h3>Comunicación visual para proyectos reales</h3>
-          <p>Diseño aplicado a marcas personales y emprendimientos con sentido.</p>
-        </article>
+    <!-- Cursos Gratuitos - SOLO 3 -->
+    <section class="tab-content active" id="gratis">
+      <div class="container">
+        <div class="section-header">
+          <h2>Empeza gratis hoy mismo</h2>
+          <p>Contenido práctico para dar tus primeros pasos con confianza</p>
+        </div>
+        
+        <div class="cursos-grid">
+          <!-- CURSO 1 - EL ESENCIAL -->
+          <article class="curso-card featured" data-category="gratis">
+            <div class="curso-badge gratis">Gratuito</div>
+            <h3>Dale forma a tu proyecto</h3>
+            <p>Convertí esa idea que tenés en la cabeza en un proyecto concreto y accionable. Metodología simple basada en formas.</p>
+            <div class="curso-meta">
+              <span class="meta-item">⏱️ 4 módulos</span>
+              <span class="meta-item">🎯 Ejercicios prácticos</span>
+              <span class="meta-item">📝 Plantillas descargables</span>
+            </div>
+            <a href="curso-dale-forma.html" class="btn-curso">Comenzar curso</a>
+          </article>
+          
+          <!-- CURSO 2 - COMUNICACIÓN CLARA -->
+          <article class="curso-card" data-category="gratis">
+            <div class="curso-badge gratis">Gratuito</div>
+            <h3>Comunicación clara en 3 pasos</h3>
+            <p>Aprendé a definir tu mensaje, identificar a tu público y elegir los canales correctos sin complicaciones.</p>
+            <div class="curso-meta">
+              <span class="meta-item">⏱️ 3 módulos</span>
+              <span class="meta-item">💬 Guía de mensajes</span>
+              <span class="meta-item">🎭 Casos reales</span>
+            </div>
+            <a href="curso-comunicacion.html" class="btn-curso">Comenzar curso</a>
+          </article>
+          
+          <!-- CURSO 3 - DISEÑO PRÁCTICO -->
+          <article class="curso-card" data-category="gratis">
+            <div class="curso-badge gratis">Gratuito</div>
+            <h3>Diseño de posteos que conectan</h3>
+            <p>Creá piezas visuales efectivas aunque no sepas diseñar. Inspirado en la simplicidad de la Bauhaus.</p>
+            <div class="curso-meta">
+              <span class="meta-item">⏱️ 5 módulos</span>
+              <span class="meta-item">🎨 Kit de recursos</span>
+              <span class="meta-item">📱 Mobile-first</span>
+            </div>
+            <a href="curso-posteos.html" class="btn-curso">Comenzar curso</a>
+          </article>
+        </div>
 
-        <article class="curso-card">
-          <h3>Storytelling y marca personal</h3>
-          <p>Construí una narrativa auténtica para conectar con tu audiencia.</p>
-        </article>
+        <!-- Mensaje de valor agregado -->
+        <div class="valor-agregado">
+          <div class="valor-content">
+            <h3>¿Por qué empezar con estos cursos?</h3>
+            <div class="valor-items">
+              <div class="valor-item">
+                <span class="valor-icon">🎯</span>
+                <p><strong>Enfoque práctico:</strong> Aplicás lo que aprendés de inmediato</p>
+              </div>
+              <div class="valor-item">
+                <span class="valor-icon">🚀</span>
+                <p><strong>Resultados rápidos:</strong> En menos de una semana ves cambios</p>
+              </div>
+              <div class="valor-item">
+                <span class="valor-icon">💎</span>
+                <p><strong>Base sólida:</strong> Creás fundamentos para seguir aprendiendo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <article class="curso-card">
-          <h3>Diseño y contenido para no diseñadores</h3>
-          <p>Herramientas y métodos para crear piezas estéticas sin experiencia previa.</p>
-        </article>
-
-        <article class="curso-card">
-          <h3>Marketing para proyectos culturales</h3>
-          <p>Estrategias humanas para festivales, espacios y artistas independientes.</p>
-        </article>
-
-        <article class="curso-card">
-          <h3>Arquitectura de contenidos</h3>
-          <p>Ordená tu mensaje y publicá con un sistema simple y sostenible.</p>
-        </article>
-
-        <article class="curso-card">
-          <h3>Portfolio y piezas interactivos</h3>
-          <p>Micro-sitios y materiales digitales que cuentan tu valor con claridad.</p>
-        </article>
+    <!-- Formaciones Pagas (las mantenemos igual por ahora) -->
+    <section class="tab-content" id="pagos">
+      <div class="container">
+        <div class="section-header">
+          <h2>Formaciones completas</h2>
+          <p>Aprendizaje profundo con mentoría y comunidad</p>
+        </div>
+        
+        <div class="cursos-grid">
+          <article class="curso-card featured" data-category="pagos">
+            <div class="curso-badge pago">Formación</div>
+            <h3>Comunicación visual para proyectos reales</h3>
+            <p>Diseño aplicado a marcas personales y emprendimientos con sentido.</p>
+            <div class="curso-meta">
+              <span class="meta-item">⏱️ 8 semanas</span>
+              <span class="meta-item">👥 Mentoría</span>
+              <span class="meta-item">💼 Proyecto final</span>
+            </div>
+            <a href="formacion-comunicacion.html" class="btn-curso btn-pago">Ver formación</a>
+          </article>
+          
+          <article class="curso-card" data-category="pagos">
+            <div class="curso-badge pago">Formación</div>
+            <h3>Storytelling y marca personal</h3>
+            <p>Construí una narrativa auténtica para conectar con tu audiencia.</p>
+            <div class="curso-meta">
+              <span class="meta-item">⏱️ 6 semanas</span>
+              <span class="meta-item">🎭 Talleres</span>
+              <span class="meta-item">📖 Portfolio</span>
+            </div>
+            <a href="formacion-storytelling.html" class="btn-curso btn-pago">Ver formación</a>
+          </article>
+          
+          <article class="curso-card" data-category="pagos">
+            <div class="curso-badge pago">Formación</div>
+            <h3>Marketing para proyectos culturales</h3>
+            <p>Estrategias humanas para festivales, espacios y artistas.</p>
+            <div class="curso-meta">
+              <span class="meta-item">⏱️ 7 semanas</span>
+              <span class="meta-item">🏛️ Enfoque cultural</span>
+              <span class="meta-item">🤝 Networking</span>
+            </div>
+            <a href="formacion-marketing.html" class="btn-curso btn-pago">Ver formación</a>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2025 FormaHub — Diseño, comunicación y experiencias digitales.</p>
+    <div class="footer-content">
+      <!-- Newsletter -->
+      <div class="newsletter-section">
+        <h3>Sumate a Forma Hub</h3>
+        <p>Recibí tips de comunicación y novedades de cursos.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="tu.email@ejemplo.com" required class="newsletter-input">
+          <button type="submit" class="btn-newsletter">Suscribirme</button>
+        </form>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 FormaHub — Diseño, comunicación y experiencias digitales.</p>
+      </div>
+    </div>
   </footer>
 
   <script>
-    // Tabs simples
-    const btns = document.querySelectorAll('.tab-btn');
-    const panes = document.querySelectorAll('.cards-wrap');
-
-    btns.forEach(b=>{
-      b.addEventListener('click', ()=>{
-        btns.forEach(x=>x.classList.remove('active'));
-        b.classList.add('active');
-
-        const target = b.dataset.target;
-        panes.forEach(p=>{
-          p.classList.toggle('show', p.dataset.tab === target);
+    // TABS MEJORADOS PARA CURSOS
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Remover active de todos
+          tabBtns.forEach(b => b.classList.remove('active'));
+          tabContents.forEach(c => c.classList.remove('active'));
+          
+          // Activar tab clickeado
+          this.classList.add('active');
+          const tabId = this.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+          
+          // Efecto visual
+          this.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            this.style.transform = '';
+          }, 150);
         });
-
-        document.getElementById('tabs').scrollIntoView({behavior:'smooth', block:'start'});
+      });
+      
+      // Animación de entrada para las cards
+      const cards = document.querySelectorAll('.curso-card');
+      cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+          card.style.transition = 'all 0.6s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 100);
       });
     });
-
-    // Si llegan con #tabs, abrimos "Formaciones"
-    if (location.hash === '#tabs') {
-      document.querySelector('.tab-btn[data-target="pagos"]').click();
-    }
   </script>
 </body>
 </html>

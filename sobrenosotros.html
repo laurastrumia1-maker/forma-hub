@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FormaHub — Sobre nosotros</title>
+  <title>Sobre Nosotros — FormaHub</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- ===== Header ===== -->
   <header class="site-header">
-    <a href="index.html" class="logo-wrap" aria-label="Ir al inicio">
-      <img src="assets/img/logoformahub.png" alt="Logo FormaHub" class="logo"/>
+    <a href="index.html" class="logo-wrap">
+      <img src="assets/img/logoformahub.png" alt="Logo FormaHub" class="logo" />
     </a>
-    <nav class="main-nav" aria-label="Principal">
+    <nav class="main-nav">
       <a href="index.html">Inicio</a>
       <a href="cursos.html">Cursos</a>
       <a href="contacto.html">Contacto</a>
@@ -20,62 +20,204 @@
     </nav>
   </header>
 
-  <!-- ===== Hero sin imagen ===== -->
-  <main class="sobre-nosotros">
-    <section class="hero-sobre limpio">
-      <h1 class="hero-title">Somos FormaHub</h1>
-      <p class="hero-sub">Un espacio donde el diseño, la comunicación y la educación se encuentran.</p>
-      <div class="linea-verde"></div>
+  <main class="about-page">
+    <!-- Hero más personal -->
+    <section class="about-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="about-title">Hola, soy <span class="text-orange">[Tu Nombre]</span></h1>
+          <p class="about-subtitle">Y creé FormaHub para ayudarte a darle forma a tus ideas, porque yo también pasé por eso.</p>
+          
+          <!-- Foto tuya opcional -->
+          <div class="creator-photo">
+            <div class="photo-placeholder">
+              <span class="photo-emoji">👋</span>
+              <p class="photo-text">Tu foto aquí</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="formas-grid">
+          <div class="forma-item">
+            <div class="forma-visual">
+              <div class="forma-suave cuadrado"></div>
+            </div>
+            <h3>Base sólida</h3>
+            <p>Estructura clara para construir desde cimientos firmes</p>
+          </div>
+          <div class="forma-item">
+            <div class="forma-visual">
+              <div class="forma-suave triangulo"></div>
+            </div>
+            <h3>Dirección clara</h3>
+            <p>Enfoque práctico que lleva a resultados concretos</p>
+          </div>
+          <div class="forma-item">
+            <div class="forma-visual">
+              <div class="forma-suave circulo"></div>
+            </div>
+            <h3>Ciclo continuo</h3>
+            <p>Aprendizaje que se retroalimenta y crece contigo</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ===== Contenido principal ===== -->
-    <section class="contenido-sobre">
-      <div class="texto">
-        <h2>Nuestra esencia</h2>
-        <p>
-          FormaHub nace con el propósito de democratizar el acceso al conocimiento en diseño, marketing y comunicación.
-          Nos dirigimos a personas reales con proyectos reales, que sienten que estos temas son complejos o lejanos,
-          pero que saben que los necesitan para crecer.
-        </p>
-        <p>
-          Nuestro método se inspira en las formas geométricas —cuadrado, triángulo y círculo— como símbolos de claridad, estructura y movimiento.
-          Cada curso parte de esta base para convertir el aprendizaje en una experiencia visual, simple y memorable.
-        </p>
-      </div>
+    <!-- Historia más personal y honesta -->
+    <section class="our-story">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-content">
+            <h2>Esto nació de mi propia frustración</h2>
+            <p>Durante años trabajé con personas increíbles que tenían ideas brillantes, pero se paralizaban frente al diseño y la comunicación. <strong>Yo misma me sentí así muchas veces.</strong></p>
+            
+            <p>Veía cómo el miedo a "no saber suficiente" les impedía mostrar su trabajo al mundo. Personas que creían que el diseño era un lenguaje secreto que nunca podrían aprender.</p>
+            
+            <div class="personal-revelation">
+              <div class="revelation-icon">💡</div>
+              <div class="revelation-text">
+                <p><strong>Mi momento "ajá":</strong> Si podía encontrar la forma esencial de cada concepto, cualquier persona podría entenderlo y aplicarlo.</p>
+              </div>
+            </div>
 
-      <div class="valores">
-        <h2>Nuestros valores</h2>
-        <ul>
-          <li><strong>Claridad:</strong> lo difícil se explica fácil.</li>
-          <li><strong>Accesibilidad:</strong> conocimiento abierto para quienes sienten que “esto no es para ellos”.</li>
-          <li><strong>Creatividad:</strong> cada curso y mensaje tiene una narrativa visual y coherente.</li>
-          <li><strong>Autonomía:</strong> que cada persona pueda dirigir su comunicación con confianza.</li>
-          <li><strong>Cercanía:</strong> hablamos con un tono humano, comprensible y empático.</li>
-        </ul>
+            <blockquote class="mission-quote">
+              "Si no lo podés explicar con formas simples, es que no lo entendiste lo suficiente. Y yo me comprometo a entenderlo lo suficiente para vos."
+            </blockquote>
+          </div>
+          <div class="story-visual">
+            <!-- Visual más orgánico -->
+            <div class="organic-pattern">
+              <div class="sketch-item">
+                <div class="sketch forma-1"></div>
+                <div class="sketch-line"></div>
+              </div>
+              <div class="sketch-item">
+                <div class="sketch forma-2"></div>
+                <div class="sketch-line"></div>
+              </div>
+              <div class="sketch-item">
+                <div class="sketch forma-3"></div>
+                <div class="sketch-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ===== Bloques finales ===== -->
-    <section class="mision-vision">
-      <div class="bloque mision">
-        <h2>Misión</h2>
-        <p>
-          Hacer accesible el diseño, la comunicación y el marketing a personas reales con proyectos reales,
-          explicando con claridad lo que muchas veces parece complejo.
-        </p>
+    <!-- Para quién es - más empático -->
+    <section class="for-who">
+      <div class="container">
+        <h2>¿Te sentís identificada con alguna de estas situaciones?</h2>
+        <p class="section-subtitle">No estás sola. Muchas personas creativas pasan por esto.</p>
+        
+        <div class="audience-grid">
+          <div class="audience-card">
+            <div class="audience-emoji">😰</div>
+            <h3>Tenés una idea pero el miedo te frena</h3>
+            <p>"¿Y si no sale bien? ¿Y si no sé por dónde empezar?" Te acompañamos a dar el primer paso.</p>
+          </div>
+          <div class="audience-card">
+            <div class="audience-emoji">🎨</div>
+            <h3>Amás crear pero odias "promocionarte"</h3>
+            <p>Tu trabajo es increíble, pero contarlo te resulta incómodo. Te enseñamos a comunicar con autenticidad.</p>
+          </div>
+          <div class="audience-card">
+            <div class="audience-emoji">📚</div>
+            <h3>Probaste cursos que te abrumaron</h3>
+            <p>Demasiada teoría, poca práctica. Nuestro enfoque es 80% hacer, 20% teoría.</p>
+          </div>
+          <div class="audience-card">
+            <div class="audience-emoji">💪</div>
+            <h3>Querés independencia creativa</h3>
+            <p>Saber suficiente para dirigir tu proyecto, incluso si después elegís delegar.</p>
+          </div>
+        </div>
       </div>
-      <div class="bloque vision">
-        <h2>Visión</h2>
-        <p>
-          Convertirnos en la plataforma de referencia en Latinoamérica para la educación accesible en comunicación,
-          diseño y marketing, creando un espacio donde aprender sea simple, visual y aplicable.
-        </p>
+    </section>
+
+    <!-- Método más conversacional -->
+    <section class="our-method">
+      <div class="container">
+        <h2>Así es como te acompañamos</h2>
+        <p class="section-subtitle">Un camino claro, sin jerga técnica ni supuestos previos</p>
+        
+        <div class="method-steps">
+          <div class="method-step">
+            <div class="step-visual">
+              <div class="step-emoji">🔍</div>
+            </div>
+            <div class="step-number">1</div>
+            <h3>Encontramos el núcleo de tu idea</h3>
+            <p>Juntos identificamos qué hace único tu proyecto y le damos estructura visual. Sin tecnicismos, con preguntas simples.</p>
+          </div>
+          
+          <div class="method-step">
+            <div class="step-visual">
+              <div class="step-emoji">🛠️</div>
+            </div>
+            <div class="step-number">2</div>
+            <h3>Te damos herramientas que podés usar hoy</h3>
+            <p>Plantillas, ejemplos reales y técnicas que aplicás inmediatamente. Aprendés haciendo, no memorizando.</p>
+          </div>
+          
+          <div class="method-step">
+            <div class="step-visual">
+              <div class="step-emoji">🤝</div>
+            </div>
+            <div class="step-number">3</div>
+            <h3>Creamos comunidad, no competencia</h3>
+            <p>Conectás con otras personas que están en el mismo camino. Aprendemos juntas, sin juicios.</p>
+          </div>
+        </div>
+
+        <!-- CTA personal -->
+        <div class="method-cta">
+          <p><strong>¿Resuena con vos?</strong> No tenés que hacerlo sola. Te guío en cada paso.</p>
+          <a href="contacto.html" class="btn btn-primary">Hablemos de tu proyecto</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nueva sección: Valores -->
+    <section class="our-values">
+      <div class="container">
+        <h2>Esto es lo que nos guía</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">💎</div>
+            <h3>Claridad ante todo</h3>
+            <p>Si no es simple, no está bien explicado. Buscamos la esencia de cada concepto.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">❤️</div>
+            <h3>Empatía real</h3>
+            <p>Recordamos cómo se siente estar del otro lado. Diseñamos desde ahí.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🌱</div>
+            <h3>Crecimiento orgánico</h3>
+            <p>Celebramos los pequeños pasos. El progreso, no la perfección.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2025 FormaHub — Diseño, comunicación y experiencias digitales.</p>
+    <div class="footer-content">
+      <div class="newsletter-section">
+        <h3>Sumate a Forma Hub</h3>
+        <p>Recibí tips de comunicación y novedades de cursos.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="tu.email@ejemplo.com" required class="newsletter-input">
+          <button type="submit" class="btn-newsletter">Suscribirme</button>
+        </form>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 FormaHub — Diseño, comunicación y experiencias digitales.</p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

@@ -5,51 +5,334 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FormaHub — Inicio</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="js/script.js"></script>
 </head>
 <body>
-  <!-- ===== Header (menú simple) ===== -->
+  <!-- Header -->
   <header class="site-header">
-    <a href="index.html" class="logo-wrap" aria-label="Ir al inicio">
-      <img src="assets/img/logoformahub.png" alt="Logo FormaHub" class="logo"/>
+    <a href="index.html" class="logo-wrap">
+      <img src="assets/img/logo formahub.png" alt="Logo FormaHub" class="logo" />
     </a>
-    <nav class="main-nav" aria-label="Principal">
+    <nav class="main-nav">
       <a href="index.html" class="activo">Inicio</a>
       <a href="cursos.html">Cursos</a>
       <a href="contacto.html">Contacto</a>
-      <a href="#sobre">Sobre nosotros</a>
+      <a href="sobrenosotros.html">Sobre nosotros</a>
     </nav>
   </header>
 
-  <!-- ===== Hero ===== -->
+  <!-- HERO -->
   <main>
-    <section class="intro" style="text-align:center; padding: clamp(40px,6vw,80px) 20px;">
-      <h1 class="hero-title" style="font-size: clamp(36px, 7vw, 64px); font-weight:900; color:var(--blue);">
-        DALE FORMA A TUS IDEAS
-      </h1>
-      <p class="hero-sub" style="margin-top:8px">Todo puede empezar con una forma simple</p>
+    <section class="hero-section">
+      <div class="hero-grid">
+        <!-- Texto -->
+        <div class="hero-copy">
+          <h1 class="hero-title">Dale forma a tus <span>ideas</span></h1>
+          <p class="hero-sub">Te acompaño a transformar esa idea en un proyecto concreto y accionable.</p>
 
-      <a href="cursos.html" class="btn-cta" style="margin-top:26px; display:inline-block;">
-        Ver todo el catálogo
-      </a>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="cursos.html">Comenzar gratis</a>
+            <a class="btn btn-outline" href="#como-funciona">Ver cómo funciona</a>
+          </div>
 
-      <!-- Semicírculo decorativo (limpio, equilibrado) -->
-      <svg viewBox="0 0 600 200" width="360" height="120" aria-hidden="true" style="display:block; margin:36px auto 0;">
-        <path d="M0 200 A300 300 0 0 1 600 200 Z" fill="var(--orange)"/>
-      </svg>
+          <!-- Valores reales -->
+          <div class="hero-valores">
+            <div class="valor">
+              <span class="valor-icon">🎯</span>
+              <span class="valor-text">Método claro y práctico</span>
+            </div>
+            <div class="valor">
+              <span class="valor-icon">💙</span>
+              <span class="valor-text">Acompañamiento humano</span>
+            </div>
+            <div class="valor">
+              <span class="valor-icon">🚀</span>
+              <span class="valor-text">Resultados desde el día 1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Patrón 3×3 CON LAS 3 FORMAS (Formas planas, sin trazo) -->
+        <div class="hero-pattern">
+          <div class="formas-metodologia">
+            <!-- Fila 1 -->
+            <div class="forma cuadrado" data-tipo="estructura" title="Estructura - Conocimientos base">
+              <svg viewBox="0 0 100 100" class="forma-svg">
+                <rect x="20" y="20" width="60" height="60" fill="#2e505b"/>
+              </svg>
+            </div>
+            <div class="forma triangulo" data-tipo="conexion" title="Conexión - Con lo que ya sabés">
+              <svg viewBox="0 0 100 100" class="forma-svg">
+                <polygon points="50,15 85,85 15,85" fill="#e43201"/>
+              </svg>
+            </div>
+            <div class="forma circulo" data-tipo="integracion" title="Integración - Tu proyecto toma forma">
+              <svg viewBox="0 0 100 100" class="forma-svg">
+                <circle cx="50" cy="50" r="35" fill="#99aa16"/>
+              </svg>
+            </div>
+
+            <!-- Fila 2 -->
+            <div class="forma triangulo" data-tipo="conexion">
+              <svg viewBox="0 0 100 100" class="forma-svg">
+                <polygon points="50,15 85,85 15,85" fill="#e43201"/>
+              </svg>
+            </div>
+            <div class="forma circulo" data-tipo="integracion">
+              <svg viewBox="0 0 100 100" class="forma-svg">
+                <circle cx="50" cy="50" r="35" fill="#99aa16"/>
+              </svg>
+            </div>
+            <div class="forma cuadrado" data-tipo="estructura">
+              <svg viewBox="0 0 100 100" class="forma-svg">
+                <rect x="20" y="20" width="60" height="60" fill="#2e505b"/>
+              </svg>
+            </div>
+
+            <!-- Fila 3 -->
+            <div class="forma circulo" data-tipo="integracion">
+              <svg viewBox="0 0 100 100" class="forma-svg">
+                <circle cx="50" cy="50" r="35" fill="#99aa16"/>
+              </svg>
+            </div>
+            <div class="forma cuadrado" data-tipo="estructura">
+              <svg viewBox="0 0 100 100" class="forma-svg">
+                <rect x="20" y="20" width="60" height="60" fill="#2e505b"/>
+              </svg>
+            </div>
+            <div class="forma triangulo" data-tipo="conexion">
+              <svg viewBox="0 0 100 100" class="forma-svg">
+                <polygon points="50,15 85,85 15,85" fill="#e43201"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Sección “Sobre” corta (ancla del menú) -->
-    <section id="sobre" style="max-width:920px;margin:40px auto 80px;padding:0 20px;text-align:center;">
-      <h2 style="font-family:var(--font-sans);color:var(--blue);">Sobre FormaHub</h2>
-      <p style="color:var(--soft-ink)">
-        Hacemos accesible el diseño, la comunicación y el marketing para personas reales con proyectos reales,
-        con un método claro, visual y humano.
-      </p>
+    <!-- CÓMO FUNCIONA (Ilustraciones planas simples) -->
+    <section class="como-funciona" id="como-funciona">
+      <div class="container">
+        <div class="section-header">
+          <h2>Transformá tu idea en proyecto en 3 pasos simples</h2>
+          <p>Metodología visual basada en formas geométricas</p>
+        </div>
+
+        <div class="pasos-grid">
+          <!-- PASO 1: CUADRADO - ESTRUCTURA -->
+          <div class="paso-card">
+            <div class="paso-visual">
+              <svg viewBox="0 0 120 120" class="ilustracion-paso">
+                <!-- Cuadrado grande -->
+                <rect x="25" y="25" width="70" height="70" fill="#2e505b" opacity="0.9"/>
+                <!-- Cuadrados pequeños "cimientos" -->
+                <rect x="30" y="70" width="15" height="15" fill="#2e505b" opacity="0.6"/>
+                <rect x="52" y="70" width="15" height="15" fill="#2e505b" opacity="0.6"/>
+                <rect x="74" y="70" width="15" height="15" fill="#2e505b" opacity="0.6"/>
+              </svg>
+            </div>
+            <h3>1. Definí la base</h3>
+            <p>Estructurá tu idea con fundamentos sólidos. Clarificá tu mensaje y objetivos.</p>
+          </div>
+          
+          <!-- PASO 2: TRIÁNGULO - CONEXIÓN -->
+          <div class="paso-card">
+            <div class="paso-visual">
+              <svg viewBox="0 0 120 120" class="ilustracion-paso">
+                <!-- Triángulo principal -->
+                <polygon points="60,20 100,95 20,95" fill="#e43201" opacity="0.9"/>
+                <!-- Pequeños triángulos conectores -->
+                <polygon points="45,55 50,65 40,65" fill="#e43201" opacity="0.5"/>
+                <polygon points="75,55 80,65 70,65" fill="#e43201" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3>2. Conectá saberes</h3>
+            <p>Vinculá lo nuevo con lo que ya sabés. Aplicá tus conocimientos previos.</p>
+          </div>
+          
+          <!-- PASO 3: CÍRCULO - INTEGRACIÓN -->
+          <div class="paso-card">
+            <div class="paso-visual">
+              <svg viewBox="0 0 120 120" class="ilustracion-paso">
+                <!-- Círculo principal -->
+                <circle cx="60" cy="60" r="38" fill="#99aa16" opacity="0.9"/>
+                <!-- Círculo interno "núcleo" -->
+                <circle cx="60" cy="60" r="12" fill="#99aa16" opacity="0.5"/>
+                <!-- Círculos pequeños orbitando -->
+                <circle cx="60" cy="30" r="5" fill="#99aa16" opacity="0.6"/>
+                <circle cx="85" cy="50" r="5" fill="#99aa16" opacity="0.6"/>
+                <circle cx="80" cy="80" r="5" fill="#99aa16" opacity="0.6"/>
+              </svg>
+            </div>
+            <h3>3. Integrá y dale forma</h3>
+            <p>Todo se completa y tu proyecto toma forma final. Coherente y completo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURSOS DESTACADOS -->
+    <section class="cursos-destacados">
+      <div class="container">
+        <div class="section-header">
+          <h2>Empezá con cursos que entienden tus tiempos</h2>
+          <p>Contenido práctico diseñado para personas reales con proyectos reales</p>
+        </div>
+
+        <div class="destacados-grid">
+          <article class="curso-destacado">
+            <div class="curso-visual">
+              <div class="emoji-postit">💡</div>
+            </div>
+            <div class="curso-badge gratis">Gratuito</div>
+            <h3>Dale forma a tu proyecto</h3>
+            <p>Convertí esa idea en la cabeza en un proyecto accionable con pasos claros.</p>
+            <div class="curso-meta">
+              <span class="meta-item">⏱️ A tu ritmo</span>
+              <span class="meta-item">🎯 Ejercicios prácticos</span>
+            </div>
+            <a href="curso-dale-forma.html" class="btn btn-outline">Comenzar curso</a>
+          </article>
+          
+          <article class="curso-destacado">
+            <div class="curso-visual">
+              <div class="curso-visual">
+                <svg viewBox="0 0 100 100" class="curso-icon">
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 114.62">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f0d332;
+      }
+    </style>
+  </defs>
+  <g id="OBJECTS">
+    <g>
+      <path class="cls-1" d="M25.31,25.32v63.98c0,13.98-11.34,25.32-25.31,25.32V0c6.99,0,13.32,2.83,17.89,7.42,4.58,4.59,7.42,10.91,7.42,17.9Z"/>
+      <path class="cls-1" d="M41.66,0h0C55.63,0,66.98,11.34,66.98,25.31v63.99c0,13.97-11.34,25.31-25.31,25.31h0c-13.97,0-25.31-11.34-25.31-25.31V25.31C16.35,11.34,27.69,0,41.66,0Z"/>
+      <path class="cls-1" d="M83.33,114.62h0c-13.98,0-25.31-11.33-25.31-25.31V25.31c0-13.98,11.33-25.31,25.31-25.31h0c13.98,0,25.31,11.33,25.31,25.31v63.99c0,13.98-11.33,25.31-25.31,25.31Z"/>
+      <path class="cls-1" d="M125,0v114.62c-13.98,0-25.31-11.34-25.31-25.32V25.32c0-13.98,11.32-25.32,25.31-25.32Z"/>
+    </g>
+  </g>
+</svg>
+               </svg>
+              </div>
+            </div>
+            <div class="curso-badge gratis">Gratuito</div>
+            <h3>Comunicación clara en 3 pasos</h3>
+            <p>Aprendé a definir mensaje, público y canales sin complicaciones.</p>
+            <div class="curso-meta">
+              <span class="meta-item">⏱️ 3 módulos</span>
+              <span class="meta-item">💬 Guía de mensajes</span>
+            </div>
+            <a href="curso-comunicacion.html" class="btn btn-outline">Comenzar curso</a>
+          </article>
+          
+          <article class="curso-destacado">
+            <div class="curso-visual">
+              <div class="emoji-postit">🎨</div>
+            </div>
+            <div class="curso-badge gratis">Gratuito</div>
+            <h3>Diseño de posteos que conectan</h3>
+            <p>Creá piezas visuales efectivas sin saber diseñar. Inspirado en Bauhaus.</p>
+            <div class="curso-meta">
+              <span class="meta-item">⏱️ 5 módulos</span>
+              <span class="meta-item">🎨 Kit de recursos</span>
+            </div>
+            <a href="curso-posteos.html" class="btn btn-outline">Comenzar curso</a>
+          </article>
+        </div>
+
+        <div class="cta-centrado">
+          <a href="cursos.html" class="btn btn-primary">Explorar todos los cursos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA QUIÉN ES -->
+    <section class="para-quien">
+      <div class="container">
+        <div class="section-header">
+          <h2>¿Te sentís identificada con alguna de estas situaciones?</h2>
+          <p>No estás sola - muchas personas creativas pasan por esto</p>
+        </div>
+
+        <div class="audiencia-grid">
+          <div class="audiencia-card">
+            <div class="audiencia-emoji">💡</div>
+            <h3>Tenés una idea pero no sabés por dónde empezar</h3>
+            <p>Te ayudamos a estructurarla y darle forma concreta, sin abrumarte.</p>
+          </div>
+          
+          <div class="audiencia-card">
+            <div class="audiencia-emoji">🎨</div>
+            <h3>Sentís que el diseño "no es para vos"</h3>
+            <p>Te enseñamos principios simples que podés aplicar sin ser diseñadora.</p>
+          </div>
+          
+          <div class="audiencia-card">
+            <div class="audiencia-emoji">📱</div>
+            <h3>Querés conectar pero no sabés cómo</h3>
+            <p>Aprendés a comunicar de forma auténtica que resuene con tu audiencia.</p>
+          </div>
+          
+          <div class="audiencia-card">
+            <div class="audiencia-emoji">🚀</div>
+            <h3>Buscás un método que se adapte a vos</h3>
+            <p>Sin tecnicismos, con pasos aplicables a tu ritmo y realidad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSFORMACIÓN -->
+    <section class="transformacion">
+      <div class="container">
+        <div class="transformacion-content">
+          <h2>De la idea difusa al proyecto con forma</h2>
+          <p>En FormaHub no solo aprendés conceptos - encontrás un camino claro para materializar lo que imaginás.</p>
+          
+          <div class="transformacion-list">
+            <div class="transformacion-item">
+              <span class="check">✓</span>
+              <span>Pasás de "no sé por dónde empezar" a tener un plan concreto</span>
+            </div>
+            <div class="transformacion-item">
+              <span class="check">✓</span>
+              <span>Cambiás la inseguridad por confianza en lo que comunicás</span>
+            </div>
+            <div class="transformacion-item">
+              <span class="check">✓</span>
+              <span>Transformás ideas abstractas en proyectos tangibles</span>
+            </div>
+          </div>
+
+          <div class="cta-final">
+            <a href="cursos.html" class="btn btn-primary btn-large">Quiero darle forma a mi proyecto</a>
+            <p class="cta-note">Empezá gratis hoy mismo - Sin compromiso, a tu ritmo</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2025 FormaHub — Diseño, comunicación y experiencias digitales.</p>
+    <div class="footer-content">
+      <!-- Newsletter -->
+      <div class="newsletter-section">
+        <h3>Sumate a Forma Hub</h3>
+        <p>Recibí tips de comunicación y novedades de cursos.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="tu.email@ejemplo.com" required class="newsletter-input">
+          <button type="submit" class="btn-newsletter">Suscribirme</button>
+        </form>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 FormaHub — Diseño, comunicación y experiencias digitales.</p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

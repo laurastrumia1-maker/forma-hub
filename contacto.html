@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FormaHub — Contacto</title>
+  <title>Contacto — FormaHub</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- ===== Header ===== -->
+  <!-- Header -->
   <header class="site-header">
-    <a href="index.html" class="logo-wrap" aria-label="Ir al inicio">
-      <img src="assets/img/logoformahub.png" alt="Logo FormaHub" class="logo"/>
+    <a href="index.html" class="logo-wrap">
+      <img src="assets/img/logoformahub.png" alt="Logo FormaHub" class="logo" />
     </a>
-    <nav class="main-nav" aria-label="Principal">
+    <nav class="main-nav">
       <a href="index.html">Inicio</a>
       <a href="cursos.html">Cursos</a>
       <a href="contacto.html" class="activo">Contacto</a>
@@ -20,43 +21,289 @@
     </nav>
   </header>
 
-  <!-- ===== Hero ===== -->
   <main class="contacto-page">
+    <!-- Hero Contacto MEJORADO -->
     <section class="contacto-hero">
-      <h1 class="hero-title">Hablemos</h1>
-      <p class="hero-sub">Nos encanta escuchar ideas, proyectos y preguntas.</p>
-
-      <svg viewBox="0 0 600 200" width="340" height="120" aria-hidden="true" style="display:block; margin:40px auto 0;">
-        <circle cx="300" cy="100" r="100" fill="var(--blue)" opacity="0.1"/>
-      </svg>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="contacto-title">Hablemos de darle <span class="text-orange">forma</span> a tus ideas</h1>
+          <p class="contacto-subtitle">¿Tenés un proyecto en mente pero no sabés por dónde empezar? Te ayudamos a convertirlo en realidad.</p>
+          
+          <!-- Mini indicadores de confianza -->
+          <div class="confianza-indicators">
+            <div class="indicator">
+              <span class="indicator-number">24</span>
+              <span class="indicator-text">horas de respuesta</span>
+            </div>
+            <div class="indicator">
+              <span class="indicator-number">100%</span>
+              <span class="indicator-text">gratuita la consulta</span>
+            </div>
+            <div class="indicator">
+              <span class="indicator-number">★</span>
+              <span class="indicator-text">sin compromiso</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ===== Formulario ===== -->
-    <section class="formulario-contacto">
-      <form>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+    <div class="contacto-grid">
+      <!-- Información de contacto MEJORADA -->
+      <div class="contacto-info">
+        <div class="info-content">
+          <h2>Elegí cómo preferís contactarnos</h2>
+          <p class="info-description">
+            Cada proyecto es único. Contanos el tuyo y te guiamos con la opción que mejor se adapte a lo que necesitás.
+          </p>
+          
+          <div class="contacto-datos">
+            <div class="contacto-item" data-contact-type="email">
+              <div class="contacto-icon">📧</div>
+              <div class="contacto-detail">
+                <h3>Para consultas detalladas</h3>
+                <a href="mailto:formahub7@gmail.com" class="contacto-link">formahub7@gmail.com</a>
+                <p>Ideal si tenés muchas preguntas o necesitás adjuntar archivos</p>
+                <span class="contacto-tiempo">Respuesta en 24 horas</span>
+              </div>
+            </div>
+            
+            <div class="contacto-item" data-contact-type="whatsapp">
+              <div class="contacto-icon">💬</div>
+              <div class="contacto-detail">
+                <h3>Para respuestas rápidas</h3>
+                <a href="https://wa.me/5492974290964" target="_blank" class="contacto-link">WhatsApp</a>
+                <p>Perfecto para consultas puntuales sobre cursos o inscripciones</p>
+                <span class="contacto-tiempo">Respuesta inmediata</span>
+              </div>
+            </div>
+            
+            <div class="contacto-item" data-contact-type="instagram">
+              <div class="contacto-icon">📱</div>
+              <div class="contacto-detail">
+                <h3>Para inspirarte</h3>
+                <a href="https://instagram.com/formahub" target="_blank" class="contacto-link">@formahub</a>
+                <p>Segrinos para tips diarios y ver proyectos de la comunidad</p>
+                <span class="contacto-tiempo">Contenido fresco cada día</span>
+              </div>
+            </div>
+          </div>
 
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+          <!-- Sección extra para guiar la elección -->
+          <div class="guia-contacto">
+            <h4>¿No sabés por dónde empezar?</h4>
+            <div class="guia-opciones">
+              <div class="guia-item">
+                <strong>¿Consulta sobre cursos?</strong>
+                <p>Usá WhatsApp para respuestas inmediatas</p>
+              </div>
+              <div class="guia-item">
+                <strong>¿Asesoramiento personalizado?</strong>
+                <p>Mandanos un email con los detalles</p>
+              </div>
+              <div class="guia-item">
+                <strong>¿Ver ejemplos reales?</strong>
+                <p>Seguinos en Instagram</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos en qué te podemos ayudar"></textarea>
+      <!-- Formulario de contacto MEJORADO -->
+      <div class="contacto-form">
+        <div class="form-container">
+          <div class="form-header">
+            <h2>Contanos sobre tu proyecto</h2>
+            <p class="form-description">Completá este formulario y te ayudamos a darle forma.</p>
+          </div>
+          
+          <form class="form" id="contactForm">
+            <div class="form-group">
+              <label for="nombre" class="form-label">¿Cómo te llamás? *</label>
+              <input type="text" id="nombre" class="form-input" required placeholder="Tu nombre completo">
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email para responderte *</label>
+              <input type="email" id="email" class="form-input" required placeholder="tu.email@ejemplo.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="proyecto" class="form-label">¿En qué estás trabajando?</label>
+              <input type="text" id="proyecto" class="form-input" placeholder="Ej: Mi emprendimiento de cerámica, mi marca personal...">
+            </div>
+            
+            <div class="form-group">
+              <label for="asunto" class="form-label">¿En qué te podemos ayudar? *</label>
+              <select id="asunto" class="form-select" required>
+                <option value="" disabled selected>Elegí la opción que mejor describa tu consulta</option>
+                <option value="consulta-curso">Quiero saber más sobre los cursos</option>
+                <option value="asesoramiento">Necesito asesoramiento para mi proyecto</option>
+                <option value="dudas-tecnicas">Tengo dudas técnicas (plataforma, pagos, etc.)</option>
+                <option value="colaboracion">Propuesta de colaboración</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="mensaje" class="form-label">Contanos más detalles *</label>
+              <textarea id="mensaje" class="form-textarea" rows="5" required placeholder="Ej: 'Tengo una idea para un emprendimiento de...', 'Necesito ayuda con...', 'Me interesa el curso pero quisiera saber...'"></textarea>
+              <div class="char-count"><span id="charCount">0</span>/500 caracteres</div>
+            </div>
+            
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary btn-block btn-submit">
+                <span class="btn-text">✨ Enviar mi consulta</span>
+                <span class="btn-loading">Enviando...</span>
+              </button>
+              <p class="form-note">Te respondemos en menos de 24 horas. Sin spam, prometido.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
-        <button type="submit" class="btn-enviar">Enviar mensaje</button>
-      </form>
-
-      <div class="contacto-datos">
-        <h2>O encontranos en</h2>
-        <p><strong>Email:</strong> hola@formahub.com</p>
-        <p><strong>Instagram:</strong> <a href="#">@formahub</a></p>
-        <p><strong>Ubicación:</strong> Patagonia, Argentina 🌎</p>
+    <!-- FAQ MEJORADA - Más relevante -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-title">Antes de contactarnos, quizás te sirva saber que...</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-icon">🎯</div>
+            <h3>¿Los cursos son para principiantes absolutos?</h3>
+            <p>Sí, diseñamos todo para que alguien sin experiencia pueda seguir los cursos sin problemas. Empezás desde cero.</p>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-icon">💸</div>
+            <h3>¿Hay algún costo por la consulta inicial?</h3>
+            <p>No, la primera consulta es completamente gratuita. Te escuchamos y vemos cómo podemos ayudarte sin compromiso.</p>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-icon">🕒</div>
+            <h3>¿Cuánto tiempo dedico a los cursos?</h3>
+            <p>Entre 2-4 horas por semana, pero podés avanzar a tu ritmo. Los cursos están diseñados para personas ocupadas.</p>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-icon">🚀</div>
+            <h3>¿Cuándo voy a ver resultados?</h3>
+            <p>Desde la primera semana aplicás lo aprendido. Nuestro enfoque es 100% práctico y orientado a resultados.</p>
+          </div>
+        </div>
+        
+        <!-- CTA final estratégico -->
+        <div class="faq-cta">
+          <h3>¿Seguís con dudas?</h3>
+          <p>No te quedes con la duda. Escribinos ahora mismo y te ayudamos a clarificar todo.</p>
+          <div class="cta-buttons">
+            <a href="mailto:formahub7@gmail.com" class="btn btn-outline">📧 Mandar email</a>
+            <a href="https://wa.me/5492974290964" target="_blank" class="btn btn-primary">💬 Chatear por WhatsApp</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2025 FormaHub — Diseño, comunicación y experiencias digitales.</p>
+    <div class="footer-content">
+      <!-- Newsletter -->
+      <div class="newsletter-section">
+        <h3>Sumate a Forma Hub</h3>
+        <p>Recibí tips de comunicación y novedades de cursos.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="tu.email@ejemplo.com" required class="newsletter-input">
+          <button type="submit" class="btn-newsletter">Suscribirme</button>
+        </form>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>© 2025 FormaHub — Diseño, comunicación y experiencias digitales.</p>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Formulario de contacto MEJORADO
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactoForm = document.getElementById('contactForm');
+      const mensajeTextarea = document.getElementById('mensaje');
+      const charCount = document.getElementById('charCount');
+      
+      // Contador de caracteres
+      if (mensajeTextarea && charCount) {
+        mensajeTextarea.addEventListener('input', function() {
+          charCount.textContent = this.value.length;
+          
+          // Cambiar color si se acerca al límite
+          if (this.value.length > 450) {
+            charCount.style.color = '#e43201';
+          } else if (this.value.length > 400) {
+            charCount.style.color = '#ffa500';
+          } else {
+            charCount.style.color = 'var(--soft-ink)';
+          }
+        });
+      }
+      
+      // Efectos en los items de contacto
+      const contactoItems = document.querySelectorAll('.contacto-item');
+      contactoItems.forEach(item => {
+        item.addEventListener('click', function() {
+          contactoItems.forEach(i => i.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+      
+      // Envío del formulario MEJORADO
+      if (contactoForm) {
+        contactoForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const submitBtn = this.querySelector('.btn-submit');
+          const btnText = this.querySelector('.btn-text');
+          const btnLoading = this.querySelector('.btn-loading');
+          
+          // Validación adicional
+          const proyecto = document.getElementById('proyecto').value;
+          const mensaje = document.getElementById('mensaje').value;
+          
+          if (mensaje.length < 10) {
+            alert('¡Contanos un poco más! Tu mensaje es muy corto.');
+            return;
+          }
+          
+          // Mostrar estado de carga MEJORADO
+          btnText.style.display = 'none';
+          btnLoading.style.display = 'inline';
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.7';
+          
+          // Simular envío con mejor UX
+          setTimeout(() => {
+            // Mensaje de éxito MEJORADO
+            const proyectoNombre = proyecto || 'tu proyecto';
+            alert(`¡Perfecto! Recibimos tu consulta sobre ${proyectoNombre}. Te escribimos en menos de 24 horas. 📧✨`);
+            
+            // Resetear formulario
+            this.reset();
+            charCount.textContent = '0';
+            charCount.style.color = 'var(--soft-ink)';
+            
+            // Restaurar botón con animación
+            setTimeout(() => {
+              btnText.style.display = 'inline';
+              btnLoading.style.display = 'none';
+              submitBtn.disabled = false;
+              submitBtn.style.opacity = '1';
+            }, 500);
+          }, 2000);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
